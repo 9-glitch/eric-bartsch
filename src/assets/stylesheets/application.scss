@@ -6,6 +6,7 @@ html, body {
 .nav-trans {
     background-color: transparent;
     top: 10px;
+    z-index: 100;
 }
 
 .nav-brand-img {
@@ -15,7 +16,7 @@ html, body {
 
 .nav-menu-img {
     height: 60px;
-    z-index: 1;
+    z-index: 100;
     margin-right: 20px;
 }
 
@@ -86,12 +87,19 @@ html, body {
     position: absolute;
     top: 0;
     left: 65%;
-    z-index: -1;
+    z-index: 50;
 }
 
 .menu-items {
-    margin-top: 60px;
+    margin-top: 150px;
     margin-left: 20px;
+    z-index: 200;
+}
+
+.menu-items a:hover, .menu-items a:visited, .menu-items a:link, .menu-items a:active
+{
+  text-decoration: none !important;
+  color: black;
 }
 
 .contact-list {

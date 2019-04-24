@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-navbar class="nav-trans" toggleable="lg">
-      <b-navbar-brand href="#">
+      <b-navbar-brand href="/">
         <img class="nav-brand-img" src="../assets/images/avatar-headshot.jpeg">
       </b-navbar-brand>
       <b-navbar-nav class="ml-auto">
@@ -25,7 +25,8 @@
             <br>
             <div class="main-text-bio">
             I am a former chef turned full stack developer.
-            The more Javascript, the better.
+            I love simple clean design.
+            I am currently looking for freelance as well as employment opportunities.
             </div>
           </div>
         </div>
@@ -34,24 +35,7 @@
 
     <transition name="slide-fade">
       <div v-if="showMenu" id="expandable-menu">
-        <div class="menu-items">
-          <h2>Projects</h2>
-          <h2>Work History</h2>
-          <h2>About</h2>
-          <h2>Fun Stuff</h2>
-          <div class="contact-list">
-            <p>
-              <a href="mailto: aaron@oceansyachting.com">
-                <span>bartschED@gmail.com</span>
-              </a>
-            </p>
-            <p>
-              <a href="tel:203-243-0191">
-                <span aria-hidden="true"></span> 774.271.2941
-              </a>
-            </p>
-          </div>
-        </div>
+        <sidemenu />
       </div>
     </transition>
 
@@ -62,6 +46,7 @@
 </template>
 
 <script>
+import SideMenu from '../components/SideMenu.vue'
 export default {
   name: 'HelloWorld',
   data() {
@@ -74,6 +59,9 @@ export default {
     activateKnifeAnimation() {
       this.knifeShouldReset = true;
     }
+  },
+  components: {
+    'sidemenu': SideMenu
   }
 }
 </script>
