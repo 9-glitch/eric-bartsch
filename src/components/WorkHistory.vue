@@ -1,6 +1,6 @@
 <template>
   <div>
-    hello
+    <h1 class="text-center">work history</h1>
   </div>
 </template>
 

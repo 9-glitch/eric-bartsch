@@ -1,9 +1,13 @@
 <template>
   <div>
     <div class="menu-items">
-      <a href="/projects">
-        <h2>Projects</h2>
-      </a>
+      <div class="menu-links" v-for="link in links" v-bind:key="link" v-on:click="pageToRender = link">
+        <h2>{{link}}</h2>
+      </div>
+
+      <!-- <a href="/projects"> -->
+        <h2 v-bind:value="currentPage" v-on:click="currentPage = 'projects'">Projects</h2>
+      <!-- </a> -->
       <a href="/work-history">
         <h2>Work History</h2>
       </a>
@@ -22,14 +26,44 @@
           <h6>774.271.2941</h6>
         </a>
       </div>
+      
     </div>
+    <component v-bind:is="currentPageComponent" />
   </div>
 </template>
 
 <script>
+import projects from '../components/Projects.vue'
 export default {
-  name: "SideMenu"
-};
+  name: 'SideMenu',
+  data() {
+    return {
+      pageToRender: '',
+      links: ['Projects', 'WorkHistory', 'About', 'FunStuff']
+    }
+  },
+  props: [
+    'currentPage'
+  ],
+  methods: {
+    toggleNewPage(newPage, currentPage) {
+      if (newPage === currentPage) {
+        console.log(currentPage)
+        return
+      } else {
+        this.pageToRender = newPage
+      }
+    }
+  },
+  components: {
+    projects
+  },
+  computed: {
+    currentPageComponent: function () {
+      return this.pageToRender.toLowerCase()
+    }
+  }
+}
 </script>
 
 <style>

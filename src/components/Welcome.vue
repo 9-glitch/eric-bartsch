@@ -13,29 +13,53 @@
       </b-navbar-nav>
     </b-navbar>
 
-    <div class="container">
-      <div class="main-text">
-        <div class="container custom-container">
-          <div class="wrapper text-center">
-            <div class="main-text-name">
-              Eric Bartsch
-            </div>
-            <br>
-            <div class="main-text-accent"></div>
-            <br>
-            <div class="main-text-bio">
-            I am a former chef turned full stack developer.
-            I love simple clean design.
-            I am currently looking for freelance as well as employment opportunities.
+    <div v-if="currentPage === 'Welcome'">
+      <transition name="foo">
+        <div class="container">
+          <div class="main-text" v-bind:class="{ blurText:showMenu }">
+            <div class="container custom-container">
+              <div class="wrapper text-center">
+                <div class="main-text-name">
+                  Eric Bartsch 
+                </div>
+                <br>
+                <div class="main-text-accent"></div>
+                <br>
+                <div class="main-text-bio">
+                I am a former chef turned full stack developer.
+                I specialize in JavaScript in both the front and backend.
+                I am currently available for freelance work as well as employment opportunities.
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </transition>
+    </div>
+    <div v-else>
+      <transition name="slide-component">
+        <component v-bind:is="currentPageComponent" class="component-wrapper"/>
+      </transition>
     </div>
 
-    <transition name="slide-fade">
+    <transition name="slide-side-menu">
       <div v-if="showMenu" id="expandable-menu">
-        <sidemenu />
+        <div class="menu-items">
+          <div class="menu-links" v-for="link in links" v-bind:key="link">
+            <div class="link-container" v-on:click="pageToRender = link, toggleCurrentPage(pageToRender)">
+              <h2>{{link}}</h2>
+            </div>
+          </div>
+          <div class="contact-list">
+            <h6>Contact Me</h6>
+            <a href="mailto: bartsched@gmail.com">
+              <h6>bartschED@gmail.com</h6>
+            </a>
+            <a href="tel:7742712941">
+              <h6>774.271.2941</h6>
+            </a>
+          </div>
+        </div>
       </div>
     </transition>
 
@@ -46,22 +70,46 @@
 </template>
 
 <script>
-import SideMenu from '../components/SideMenu.vue'
+import Projects from '../components/Projects.vue'
+import WorkHistory from '../components/WorkHistory.vue'
+import About from '../components/About.vue'
+import FunStuff from '../components/FunStuff.vue'
+
 export default {
-  name: 'HelloWorld',
+  name: 'Welcome',
   data() {
     return {
       showMenu: false,
-      knifeShouldReset: false
+      knifeShouldReset: false,
+      showNewPage: false,
+      currentPage: 'Welcome',
+      pageToRender: '',
+      links: ['Projects', 'Work History', 'About', 'Fun Stuff']
     }
   },
   methods: {
     activateKnifeAnimation() {
       this.knifeShouldReset = true;
+    }, 
+    toggleCurrentPage(newPage) {
+      if(newPage != this.currentPage) {
+        this.currentPage = newPage
+        this.showMenu = false
+      } else {
+        return 
+      }
     }
   },
   components: {
-    'sidemenu': SideMenu
+    Projects,
+    WorkHistory,
+    About,
+    FunStuff
+  },
+  computed: {
+    currentPageComponent: function () {
+      return this.pageToRender.replace(/\s+/g, '-').toLowerCase()
+    }
   }
 }
 </script>
