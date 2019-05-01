@@ -1,7 +1,11 @@
 html, body {
     max-width: 100%;
     overflow-x: hidden;
-    overflow-y: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2 {
+    font-weight: 300 !important;
 }
 
 .nav-trans {
@@ -13,6 +17,7 @@ html, body {
 .nav-brand-img {
     height: 60px;
     margin-left: 20px;
+    border-radius: 50%;
 }
 
 .nav-menu-img {
@@ -58,6 +63,21 @@ html, body {
     top: 0;
 }
 
+.component-bg {
+    min-height: 100vh;
+    height: auto;
+    background-color: rgb(243, 239, 225);
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+}
+
+#footer {
+    height: 100%;
+    background-color: rgb(67, 66, 66);
+ }
+
 .main-text {
     position: absolute;
     top: 40%;
@@ -65,9 +85,13 @@ html, body {
     left: 0%;
 }
 
-.blurText {
+.blurContent {
     color: transparent;
     text-shadow: 0 0 4px rgba(0,0,0,0.5);
+}
+
+.blurContent img {
+    opacity: 0.3;
 }
 
 .main-text-name {
@@ -78,6 +102,25 @@ html, body {
     border-top: 3px solid black;
     margin-left: 200px;
     margin-right: 200px;
+}
+
+.section-text-accent {
+    border-top: 1px solid gray;
+    margin-bottom: 30px;
+}
+
+.section-header-padding {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.section-wrapper {
+    min-height: 100vh;
+}
+
+.footer-header-padding {
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 // remove custom container for smaller screens
@@ -115,8 +158,34 @@ html, body {
     cursor: pointer;
 }
 
+.fa-icon {
+    font-size: 50px;
+    color: rgb(151, 104, 201);
+}
+
+.fa-icon.li{
+    margin-left: 20px;
+}
+
+.fa-icon.env{
+    margin-right: 20px;
+}
+
 .contact-list {
     margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+.text-color-primary {
+    color: rgb(116, 116, 116);
+}
+
+.text-color-secondary {
+    color: rgb(151, 104, 201);
+}
+
+.text-color-light {
+    color: rgb(233, 227, 227);
 }
 
 .component-wrapper {
@@ -125,7 +194,38 @@ html, body {
     width: 100vw;
     opacity: 0.7;
     z-index: 0;
-    top: 102;
+    top: 50px;
+}
+
+.section-text {
+    margin-top: 60px;
+}
+
+.project-img-thumb {
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.headshot-img {
+    border-radius: 50%;
+    max-height: 200px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+.row.custom-row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.footer-wrapper {
+    background-color: rgb(67, 66,66);
+    padding-bottom: 15px;
 }
 
 .slide-side-menu-enter-active, .slide-side-menu-leave-active {

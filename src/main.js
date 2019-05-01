@@ -7,9 +7,17 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import Welcome from './components/Welcome.vue'
 import Projects from './components/Projects.vue'
-import WorkHistory from './components/WorkHistory.vue'
+import Experience from './components/Experience.vue'
 import About from './components/About.vue'
 import FunStuff from './components/FunStuff.vue'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(fas)
+library.add(fab)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.use(Router)
 Vue.use(BootstrapVue)
@@ -29,9 +37,9 @@ const router = new Router({
       component: Projects
     },
     {
-      path: '/work-history',
-      name: 'work history',
-      component: WorkHistory
+      path: '/experience',
+      name: 'experience',
+      component: Experience
     },
     {
       path: '/about',

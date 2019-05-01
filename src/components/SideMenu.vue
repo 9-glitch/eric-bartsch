@@ -1,62 +1,79 @@
 <template>
   <div>
-    <div class="menu-items">
-      <div class="menu-links" v-for="link in links" v-bind:key="link" v-on:click="pageToRender = link">
-        <h2>{{link}}</h2>
+    <b-navbar class="nav-trans" toggleable="lg">
+      <b-navbar-brand href="/">
+        <img class="nav-brand-img" src="../assets/images/avatar-headshot.jpeg">
+      </b-navbar-brand>
+      <b-navbar-nav class="ml-auto">
+        <b-nav-item right>
+          <b-navbar-brand v-on:click="showMenu = !showMenu, activateKnifeAnimation()">
+            <img class="nav-menu-img" v-bind:class="{ knifeDown:showMenu, knifeUp:!showMenu&&knifeShouldReset }" src="../assets/images/knife.png" />
+          </b-navbar-brand>
+        </b-nav-item>
+      </b-navbar-nav>
+    </b-navbar>
+    <transition name="slide-side-menu">
+      <div v-if="showMenu" id="expandable-menu">
+        <div class="menu-items">
+          <div class="menu-links" v-for="link in links" v-bind:key="link.url">
+            <div class="link-container">
+              <router-link :to="link.url">
+                <h2>{{link.name}}</h2>
+              </router-link>
+            </div>
+          </div>
+          <div class="contact-list">
+            <h6>Contact Me</h6>
+            <a href="mailto: bartsched@gmail.com">
+              <h6>bartschED@gmail.com</h6>
+            </a>
+            <a href="tel:7742712941">
+              <h6>774.271.2941</h6>
+            </a>
+          </div>
+        </div>
       </div>
-
-      <!-- <a href="/projects"> -->
-        <h2 v-bind:value="currentPage" v-on:click="currentPage = 'projects'">Projects</h2>
-      <!-- </a> -->
-      <a href="/work-history">
-        <h2>Work History</h2>
-      </a>
-      <a href="/about">
-        <h2>About</h2>
-      </a>
-      <a href="/fun-stuff">
-        <h2>Fun Stuff</h2>
-      </a>
-      <div class="contact-list">
-        <h6>Contact Me</h6>
-        <a href="mailto: bartsched@gmail.com">
-          <h6>bartschED@gmail.com</h6>
-        </a>
-        <a href="tel:7742712941">
-          <h6>774.271.2941</h6>
-        </a>
-      </div>
-      
-    </div>
-    <component v-bind:is="currentPageComponent" />
+    </transition>
   </div>
 </template>
 
 <script>
-import projects from '../components/Projects.vue'
 export default {
   name: 'SideMenu',
   data() {
     return {
+      showMenu: false,
+      knifeShouldReset: false,
+      showNewPage: false,
       pageToRender: '',
-      links: ['Projects', 'WorkHistory', 'About', 'FunStuff']
+      links: [
+        {name: 'Experience', url: '/experience'}, 
+        {name: 'Projects', url: '/projects'},
+        {name: 'About', url: 'about'}
+        // {name: 'Fun Stuff', url: 'fun-stuff'}
+      ]
     }
   },
-  props: [
-    'currentPage'
-  ],
   methods: {
     toggleNewPage(newPage, currentPage) {
       if (newPage === currentPage) {
-        console.log(currentPage)
         return
       } else {
         this.pageToRender = newPage
       }
+    },
+    activateKnifeAnimation() {
+      this.knifeShouldReset = true;
+      this.$emit('sendShowMenuStatus', this.showMenu)
+    }, 
+    toggleCurrentPage(newPage) {
+      if(newPage != this.currentPage) {
+        this.currentPage = newPage
+        this.showMenu = false
+      } else {
+        return 
+      }
     }
-  },
-  components: {
-    projects
   },
   computed: {
     currentPageComponent: function () {
