@@ -25,7 +25,8 @@
     "morgan": "^1.9.1",
     "npm": "^6.9.0",
     "vue": "^2.6.10",
-    "vue-router": "^3.0.6"
+    "vue-router": "^3.0.6",
+    "tar": ">=4.4.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",
