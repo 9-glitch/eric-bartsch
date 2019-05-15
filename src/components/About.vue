@@ -3,10 +3,8 @@
     <side-menu @sendShowMenuStatus="getShowMenuStatus" />
     <div class="component-bg" v-bind:class="{ blurContent:showMenu }">
       <div class="section-wrapper">
-        <!-- <div class="section-text-accent"> -->
-          <h1 class="section-header-padding text-color-primary text-center">About</h1>
-        <!-- </div> -->
-        <div class="container custom-container">
+        <h1 class="section-header-padding text-color-primary text-center">About</h1>
+        <div class="container-fluid custom-container">
           <div class="section-text-accent"></div>
           <div class="text-center">
             <img class="headshot-img" src="../assets/images/headshot.jpg" />

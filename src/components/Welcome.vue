@@ -1,9 +1,8 @@
 <template>
   <div>
     <side-menu @sendShowMenuStatus="getShowMenuStatus" />
-    <div class="container">
       <div class="main-text" v-bind:class="{ blurContent:showMenu }">
-        <div class="container custom-container">
+        <div class="container-fluid custom-container">
           <div class="wrapper text-center">
             <div class="main-text-name">
               Eric Bartsch 
@@ -14,12 +13,11 @@
             <div class="main-text-bio">
             I am a former chef turned full stack developer.
             I specialize in JavaScript in both the front and backend.
-            I am currently available for freelance work as well as employment opportunities.
+            I am currently available for freelance work as well as full-time employment opportunities.
             </div>
           </div>
         </div>
       </div>
-    </div>
     <div>
       <img class="main-bg" src="../assets/images/laptop-bg.jpg" />
     </div>

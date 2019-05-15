@@ -8,83 +8,6 @@ h1, h2 {
     font-weight: 300 !important;
 }
 
-.nav-trans {
-    background-color: transparent;
-    top: 10px;
-    z-index: 100;
-}
-
-.nav-brand-img {
-    height: 60px;
-    margin-left: 20px;
-    border-radius: 50%;
-}
-
-.nav-menu-img {
-    height: 60px;
-    z-index: 100;
-    margin-right: 20px;
-}
-
-.knifeDown {
-    animation: rollDown 1s;
-    transform: rotate(-45deg);
-}
-
-.knifeUp {
-    animation: rollUp 2s;
-    transform: rotate(0);
-}
-
-@keyframes rollDown {
-    0% {
-        transform: rotate(0);
-    }
-    100% {
-        transform: rotate(-45deg);
-    }
-}
-
-@keyframes rollUp {
-    0% {
-        transform: rotate(-45deg);
-    }
-    100% {
-        transform: rotate(0);
-    }
-}
-
-.main-bg {
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    opacity: 0.7;
-    z-index: -1;
-    top: 0;
-}
-
-.component-bg {
-    min-height: 100vh;
-    height: auto;
-    background-color: rgb(243, 239, 225);
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-    top: 0;
-}
-
-#footer {
-    height: 100%;
-    background-color: rgb(67, 66, 66);
- }
-
-.main-text {
-    position: absolute;
-    top: 40%;
-    width: 100vw;
-    left: 0%;
-}
-
 .blurContent {
     color: transparent;
     text-shadow: 0 0 4px rgba(0,0,0,0.5);
@@ -92,16 +15,6 @@ h1, h2 {
 
 .blurContent img {
     opacity: 0.3;
-}
-
-.main-text-name {
-    font-size: 35px;
-}
-
-.main-text-accent {
-    border-top: 3px solid black;
-    margin-left: 200px;
-    margin-right: 200px;
 }
 
 .section-text-accent {
@@ -118,62 +31,9 @@ h1, h2 {
     min-height: 100vh;
 }
 
-.footer-header-padding {
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-// remove custom container for smaller screens
 .custom-container {
     padding-left: 200px !important;
     padding-right: 200px !important;
-}
-
-#expandable-menu {
-    background-color: rgba(151, 104, 201, 0.3);
-    width: 35%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 65%;
-    z-index: 50;
-}
-
-.menu-items {
-    margin-top: 150px;
-    margin-left: 20px;
-    z-index: 200;
-}
-
-.menu-items a:hover, .menu-items a:visited, .menu-items a:link, .menu-items a:active {
-    color: black;
-}
-
-.menu-links:hover {
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
-}
-
-.menu-links .link-container {
-    width: fit-content;
-    cursor: pointer;
-}
-
-.fa-icon {
-    font-size: 50px;
-    color: rgb(151, 104, 201);
-}
-
-.fa-icon.li{
-    margin-left: 20px;
-}
-
-.fa-icon.env{
-    margin-right: 20px;
-}
-
-.contact-list {
-    margin-top: 100px;
-    margin-bottom: 200px;
 }
 
 .text-color-primary {
@@ -201,16 +61,6 @@ h1, h2 {
     margin-top: 60px;
 }
 
-.project-img-thumb {
-    width: 100%;
-    padding-bottom: 50px;
-}
-
-.headshot-img {
-    border-radius: 50%;
-    max-height: 200px;
-}
-
 .center {
     display: block;
     margin-left: auto;
@@ -223,9 +73,105 @@ h1, h2 {
     margin-right: 0;
 }
 
-.footer-wrapper {
-    background-color: rgb(67, 66,66);
-    padding-bottom: 15px;
+//Backgrounds 
+.main-bg {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    opacity: 0.7;
+    z-index: -1;
+    top: 0;
+    min-height: 700px;
+}
+
+.component-bg {
+    min-height: 100vh;
+    height: auto;
+    background-color: rgb(243, 239, 225);
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+}
+//End Backgrounds
+
+//Navbar
+.nav-trans {
+    background-color: transparent;
+    top: 10px;
+    z-index: 100;
+}
+
+.nav-brand-img {
+    height: 60px;
+    margin-left: 20px;
+    border-radius: 50%;
+}
+
+.nav-menu-img {
+    height: 60px;
+    z-index: 100;
+    margin-right: 20px;
+}
+//End Navbar
+
+//SideMenu
+#expandable-menu {
+    background-color: rgba(151, 104, 201, 0.3);
+    width: 35%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 65%;
+    z-index: 50;
+    min-height: 700px;
+}
+
+.knifeDown {
+    animation: rollDown 1s;
+    transform: rotate(-45deg);
+}
+
+.knifeUp {
+    animation: rollUp 2s;
+    transform: rotate(0);
+}
+
+.menu-items {
+    margin-top: 150px;
+    margin-left: 20px;
+    z-index: 200;
+}
+
+.menu-items a:hover, .menu-items a:visited, .menu-items a:link, .menu-items a:active {
+    color: black;
+}
+
+.menu-links:hover {
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.menu-links .link-container {
+    width: fit-content;
+    cursor: pointer;
+}
+
+@keyframes rollDown {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes rollUp {
+    0% {
+        transform: rotate(-45deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
 }
 
 .slide-side-menu-enter-active, .slide-side-menu-leave-active {
@@ -246,4 +192,97 @@ h1, h2 {
 .slide-component-leave-to
 /* .slide-fade-leave-active below version 2.1.8 */ {
     transform: translateX(-100vw);
+}
+//End SideMenu
+
+//Footer
+#footer {
+    height: 100%;
+    background-color: rgb(67, 66, 66);
+}
+
+.footer-header-padding {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.fa-icon {
+    font-size: 50px;
+    color: rgb(151, 104, 201);
+}
+
+.fa-icon.li{
+    margin-left: 20px;
+}
+
+.fa-icon.env{
+    margin-right: 20px;
+}
+
+.contact-list {
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+//End Footer
+
+//Welcome Component
+.main-text {
+    position: absolute;
+    top: 40%;
+    width: 100vw;
+    left: 0%;
+}
+
+.main-text-name {
+    font-size: 35px;
+}
+
+.main-text-accent {
+    border-top: 3px solid black;
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+//End Welcome Component
+
+//Project Component
+.project-img-thumb {
+    width: 100%;
+    padding-bottom: 50px;
+}
+//End Project Component
+
+//About Component
+.headshot-img {
+    border-radius: 50%;
+    max-height: 200px;
+}
+//End About Component
+
+//Experience Component
+.experience-title {
+    font-weight: bold;
+    border-bottom: 1px solid black;
+}
+//End Experience Component
+
+@media screen and (max-width: 768px){
+    .custom-container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    #expandable-menu {
+        width: 50%;
+        left: 50%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 980px) {
+    .col-md-6 {
+        -ms-flex: 0 0 100% !important;
+        -webkit-box-flex: 0 !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
 }

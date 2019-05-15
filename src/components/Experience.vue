@@ -4,13 +4,15 @@
     <div class="component-bg" v-bind:class="{ blurContent:showMenu }">
       <div class="section-wrapper">
         <h1 class="section-header-padding text-color-primary text-center">Experience</h1>
-        <div class="container custom-container">
+        <div class="container-fluid custom-container">
           <div class="section-container">
             <div class="section-text-accent"></div>
             <h2 class="text-color-secondary">Work History</h2>
-            <div class="work-history-title">
+            <div class="work-history-container">
               <div class="row custom-row">
-                FitNerds/FloatNerds | Frontend Developer | January 2017 - January 2018
+                <div class="experience-title">
+                  FitNerds/FloatNerds | Frontend Developer | January 2017 - January 2018
+                </div>
               </div>
               <p></p>
               <h6>Portal</h6>
@@ -27,9 +29,11 @@
                 <li>Responsible for mobile responsive design</li>
               </ul>
             </div>
-            <div class="work-history-title">
+            <div class="work-history-container">
               <div class="row custom-row">
-                American Express | Software Engineer | July 2015 - July 2016
+                <div class="experience-title">
+                  American Express | Software Engineer | July 2015 - July 2016
+                </div>
               </div>
               <p></p>
               <h6>WSP Automation</h6>
@@ -54,7 +58,9 @@
             <h2 class="text-color-secondary">Education</h2>
             <div class="education-item">
               <div class="row custom-row">
-                Galvanize - 6 month accelerated web development course
+                <div class="experience-title">
+                  Galvanize - 6 month accelerated web development course
+                </div>
               </div>
               <p></p>
               <ul>
@@ -66,7 +72,9 @@
             </div>
             <div class="education-item">
               <div class="row custom-row">
-                Johnson & Wales University
+                <div class="experience-title">
+                  Johnson & Wales University
+                </div>
               </div>
               <p></p>
               <ul>

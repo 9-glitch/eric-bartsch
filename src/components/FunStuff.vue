@@ -4,7 +4,7 @@
     <div class="component-bg" v-bind:class="{ blurContent:showMenu }">
       <div class="section-wrapper">
         <h1 class="section-header-padding text-color-primary text-center">Fun Stuff</h1>
-        <div class="container custom-container">
+        <div class="container-fluid custom-container">
           <div class="section-container">
             <div class="section-text-accent"></div>
             <div class="text-center">
