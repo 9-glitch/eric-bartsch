@@ -19,11 +19,11 @@
                     <img class="project-img-thumb" src="../assets/images/oceans-yachting-thumb.png" alt="Oceans Yachting" />
                   </a>
                 </div>
-                <!-- <div class="col-md-6 col-sm-12 col-xs-12">
-                  <a href="https://voodoo-artisanal-sauces.herokuapp.com/" target="_blank">
-                    <img class="project-img-thumb" src="https://picsum.photos/250/250/?image=59" alt="Voodoo Artisanal Sauces" />
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                  <a href="https://fusion-home-care.herokuapp.com/" target="_blank">
+                    <img class="project-img-thumb" src="../assets/images/fusion-home-care-thumb.png" alt="Fusion Home Care" />
                   </a>
-                </div> -->
+                </div>
               </div>
             </div>
           </div>
