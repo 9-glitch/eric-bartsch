@@ -30,6 +30,12 @@
             <a href="tel:7742712941">
               <h6>774.271.2941</h6>
             </a>
+            <a href="https://www.linkedin.com/in/bartsched/" target="_blank" rel="noreferrer">
+              <font-awesome-icon class="side-menu-icon" :icon="{ prefix: 'fab', iconName: 'linkedin' }" />
+            </a>
+            <a href="https://github.com/rickyb0127/" target="_blank" rel="noreferrer">
+              <font-awesome-icon class="side-menu-icon spacing" :icon="{ prefix: 'fab', iconName: 'github' }" />
+            </a>
           </div>
         </div>
       </div>

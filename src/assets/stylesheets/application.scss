@@ -127,6 +127,15 @@ h1, h2 {
     min-height: 700px;
 }
 
+.side-menu-icon {
+    font-size: 50px;
+    color: black;
+}
+
+.side-menu-icon.spacing {
+    margin-left: 20px;
+}
+
 .knifeDown {
     animation: rollDown 1s;
     transform: rotate(-45deg);

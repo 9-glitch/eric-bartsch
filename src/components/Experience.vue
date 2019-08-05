@@ -11,6 +11,30 @@
             <div class="work-history-container">
               <div class="row custom-row">
                 <div class="experience-title">
+                  Freelance Web Developer | February 2019 - Present
+                </div>
+              </div>
+              <p></p>
+              <h6>Asbestos Startup</h6>
+              <ul>
+                <li>Built with Vue.js, node.js, mongodb</li>
+                <li>Progressive web app, using service workers to cache for offline capabilities</li>
+                <li>Integrated with Stripe API for recurring payments</li>
+              </ul>
+              <h6><a href="https://oceans-yachting.herokuapp.com/" target="_blank" rel="noreferrer">Oceans Yachting</a></h6>
+              <ul>
+                <li>Built with Ruby on Rails, then ported using Vue.js, node.js, mongodb</li>
+                <li>Features admin dashboard with the ability to store and retrieve images with Amazon S3</li>
+              </ul>
+              <h6><a href="http://www.auracommunityhealth.com/" target="_blank" rel="noreferrer">Aura Community Health</a></h6>
+              <ul>
+                <li>Built with Ruby on Rails, Bootstrap</li>
+                <li>Features mobile optimization and integration with Google calendar</li>
+              </ul>
+            </div>
+            <div class="work-history-container">
+              <div class="row custom-row">
+                <div class="experience-title">
                   FitNerds/FloatNerds | Frontend Developer | January 2017 - January 2018
                 </div>
               </div>
@@ -40,7 +64,6 @@
               <ul>
                 <li>Responsible for architecture of automated testing framework utilizing HP UFT to conduct regression tests within WSP-PA division</li>
                 <li>Connected API and GUI test features of UFT in order to drive validation from SOAP responses to the application UI</li>
-                <li>Reduced the time of QA engineers to regression test by 50%</li>
               </ul>
               <h6>Selenium Wrapper</h6>	
               <ul>

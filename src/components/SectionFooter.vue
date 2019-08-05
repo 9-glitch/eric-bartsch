@@ -11,8 +11,11 @@
             <a href="tel:7742712941">
               <font-awesome-icon class="fa-icon" :icon="{ prefix: 'fas', iconName: 'phone' }" />
             </a>
-            <a href="https://www.linkedin.com/in/bartsched/" target="_blank">
+            <a href="https://www.linkedin.com/in/bartsched/" target="_blank" rel="noreferrer">
               <font-awesome-icon class="fa-icon li" :icon="{ prefix: 'fab', iconName: 'linkedin' }" />
+            </a>
+            <a href="https://github.com/rickyb0127/" target="_blank" rel="noreferrer">
+              <font-awesome-icon class="fa-icon li" :icon="{ prefix: 'fab', iconName: 'github' }" />
             </a>
           </div>
         </div>

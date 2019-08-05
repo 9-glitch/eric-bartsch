@@ -10,17 +10,17 @@
             <div class="container-fluid">
               <div class="row">
                 <div class="col-md-6 col-sm-12 col-xs-12">
-                  <a href="http://www.auracommunityhealth.com" target="_blank">
+                  <a href="http://www.auracommunityhealth.com" target="_blank" rel="noreferrer">
                     <img class="project-img-thumb" src="../assets/images/aura-community-health-thumb.png" alt="Aura Community Health" />
                   </a>
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12">
-                  <a href="http://www.oceansyachting.com" target="_blank">
+                  <a href="http://www.oceansyachting.com" target="_blank" rel="noreferrer">
                     <img class="project-img-thumb" src="../assets/images/oceans-yachting-thumb.png" alt="Oceans Yachting" />
                   </a>
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12">
-                  <a href="https://fusion-home-care.herokuapp.com/" target="_blank">
+                  <a href="https://fusion-home-care.herokuapp.com/" target="_blank" rel="noreferrer">
                     <img class="project-img-thumb" src="../assets/images/fusion-home-care-thumb.png" alt="Fusion Home Care" />
                   </a>
                 </div>
