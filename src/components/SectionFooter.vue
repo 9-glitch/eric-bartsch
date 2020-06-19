@@ -1,7 +1,7 @@
 <template>
   <div id="footer">
     <div class="text-center">
-        <h1 class="footer-header-padding text-color-light">Contact</h1>
+        <h3 class="footer-header-padding text-color-light">Contact</h3>
         <div class="container-fluid custom-container">
           <div class="section-text-accent"></div>
           <div class="contact-list">

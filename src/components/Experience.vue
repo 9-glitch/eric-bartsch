@@ -15,18 +15,25 @@
                 </div>
               </div>
               <p></p>
-              <h6>Asbestos Startup</h6>
+              <h6>Education App</h6>
+              <h6>Lead Front End Engineer</h6>
+              <ul>
+                <li>Worked remotely with a small team to develop entire mvp for a startup in the education sector, featuring serverless architecture</li>
+                <li>Responsible for front end implementation based of specs from designer and stakeholders</li>
+                <li>Wrote GraphQL queries and resolvers that connected our client to our API</li>
+              </ul>
+              <h6>Asbestos App</h6>
               <ul>
                 <li>Built with Vue.js, node.js, mongodb</li>
                 <li>Progressive web app, using service workers to cache for offline capabilities</li>
                 <li>Integrated with Stripe API for recurring payments</li>
               </ul>
-              <h6><a href="https://oceans-yachting.herokuapp.com/" target="_blank" rel="noreferrer">Oceans Yachting</a></h6>
+              <h6>Oceans Yachting</h6>
               <ul>
                 <li>Built with Ruby on Rails, then ported using Vue.js, node.js, mongodb</li>
                 <li>Features admin dashboard with the ability to store and retrieve images with Amazon S3</li>
               </ul>
-              <h6><a href="http://www.auracommunityhealth.com/" target="_blank" rel="noreferrer">Aura Community Health</a></h6>
+              <h6>Aura Community Health</h6>
               <ul>
                 <li>Built with Ruby on Rails, Bootstrap</li>
                 <li>Features mobile optimization and integration with Google calendar</li>
